@@ -38,9 +38,9 @@ function post() {
     database.child('post/'+uId).push(donor);
 }
 
-database.child('post/'+ uId).on('child_added', function(snap) {
+database.child('post').on('child_added', function(snap) {
     var demo = snap.val();
-    var k = snap.key;
+    // var k = snap.key;
 
     // console.log(demo)
     // console.log(k);
@@ -48,10 +48,10 @@ database.child('post/'+ uId).on('child_added', function(snap) {
 
     for (var key in demo) {
         var element = demo[key];
-        element.key = key;
+        element.ID = key;
 
 
-        console.log(element);
+        console.log(element.ID);
         
     }
     
