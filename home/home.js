@@ -35,7 +35,7 @@ function post() {
 
     console.log(donor);
 
-    database.child('post/'+uId).push(donor);
+    database.child('post/'+uId).set(donor);
 }
 
 database.child('post').on('child_added', function(snap) {
@@ -51,8 +51,12 @@ database.child('post').on('child_added', function(snap) {
         element.ID = key;
 
 
-        console.log(element.ID);
+        console.log(element);
         
     }
     
-})
+});
+
+function allPost() {
+    location = '../All Posts/posts.html';
+}

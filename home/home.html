@@ -34,8 +34,8 @@
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <a class="navbar-brand" href="#">Blood Bank</a>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -56,74 +56,77 @@
                 </form>
             </div>
         </nav>
-
-        <div class="row">
-            <div class="col-md-3"></div>
-            <div class="col-md-6">
-                <div style="margin-top:5%">
-                    <h2 style="padding: 2%; color:white" class="text-center bg-danger text-light">Post Blood Requirement</h2>
-                    <div class="form-group">
-                        <select class="form-control" id="blood-group" placeholder="Blood Group">
-                            <option value="" disabled selected>Blood Group</option>
-                    <option value="A+">A+</option>
-                    <option value="B+">B+</option>
-                    <option value="O+">O+</option>
-                    <option value="AB+">AB+</option>
-                    <option value="O-">O-</option>
-                 </select>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="No. of Unit Required">
-                    </div>
-                    <div class="form-group">
-                        <select name="" id="urgency" class="form-control">
-                            <option value="" selected disabled>Urgency</option>
-                            <option value="urgent">Urgent</option>
-                            <option value="not urgent">Not Urgent</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="country" placeholder='Country'>
-                            <option value="" disabled selected>Country</option>
-                    <option value="pakistan">Pakistan</option>
-                    <option value="us">US</option>
-                    <option value="uk">UK</option>
-                    <option value="china">China</option>
-                    <option value="UAE">UAE</option>
-                 </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="city">
-                     <option value="" disabled selected>City</option>
-                    <option value="karachi">Karachi</option>
-                    <option value="lahore">Lahore</option>
-                    <option value="islamabad">Islamabad</option>
-                    <option value="faisalabad">Faisalabad</option>
-                    <option value="haiderabad">Haiderabad</option>
-                 </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="hospital">
-                     <option value="" disabled selected>Hospital</option>
-                    <option value="a hospital">A Hospital</option>
-                     <option value="b hospital">B Hospital</option>
-                    <option value="c hospital">C Hospital</option>
-                     <option value="d hospital">D Hospital</option>
-                    <option value="e hospital">E Hospital</option>
-                 </select>
-                    </div>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="relation" placeholder="Relation">
-                    </div>
-                    <div class="input-group">
-                        <textarea rows="" cols="" class="form-control" id="description" placeholder="Description"></textarea>
-                    </div>
-                    <div class="form-action">
-                        <button onclick="post();" class="btn btn-info ">Post</button>
+        <div class="container">
+            <div style="margin-top:5%" class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div>
+                        <h2 style="padding: 2%; color:white" class="text-center bg-danger text-light">Post Blood Requirement</h2>
+                        <div class="form-group">
+                            <select class="form-control" id="blood-group" placeholder="Blood Group">
+                                <option value="" disabled selected>Blood Group</option>
+                                <option value="A+">A+</option>
+                                <option value="B+">B+</option>
+                                <option value="O+">O+</option>
+                                <option value="AB+">AB+</option>
+                                <option value="O-">O-</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="No. of Unit Required">
+                        </div>
+                        <div class="form-group">
+                            <select name="" id="urgency" class="form-control">
+                                <option value="" selected disabled>Urgency</option>
+                                <option value="urgent">Urgent</option>
+                                <option value="not urgent">Not Urgent</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="country" placeholder='Country'>
+                                <option value="" disabled selected>Country</option>
+                                <option value="pakistan">Pakistan</option>
+                                <option value="us">US</option>
+                                <option value="uk">UK</option>
+                                <option value="china">China</option>
+                                <option value="UAE">UAE</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="city">
+                                <option value="" disabled selected>City</option>
+                                <option value="karachi">Karachi</option>
+                                <option value="lahore">Lahore</option>
+                                <option value="islamabad">Islamabad</option>
+                                <option value="faisalabad">Faisalabad</option>
+                                <option value="haiderabad">Haiderabad</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select class="form-control" id="hospital">
+                                <option value="" disabled selected>Hospital</option>
+                                <option value="a hospital">A Hospital</option>
+                                <option value="b hospital">B Hospital</option>
+                                <option value="c hospital">C Hospital</option>
+                                <option value="d hospital">D Hospital</option>
+                                <option value="e hospital">E Hospital</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="relation" placeholder="Relation">
+                        </div>
+                        <div class="input-group">
+                            <textarea rows="" cols="" class="form-control" id="description" placeholder="Description"></textarea>
+                        </div>
+                        <div class="form-action">
+                            <button onclick="post();" class="btn btn-info ">Post</button>
+                        </div>
                     </div>
                 </div>
+                <div class="col-md-3">
+                    <button onclick="allPost()" class="btn btn-success float-right">All Posts</button>
+                </div>
             </div>
-            <div class="col-md-3"></div>
         </div>
 
     </div>
