@@ -35,7 +35,7 @@ function post() {
 
     console.log(donor);
 
-    database.child('post/'+uId).set(donor);
+    database.child('post/'+uId).push(donor);
 }
 
 database.child('post').on('child_added', function(snap) {

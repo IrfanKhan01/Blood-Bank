@@ -7,10 +7,16 @@ var posts = document.getElementById('posts');
 var uId = localStorage.getItem('UID');
 
 var user =JSON.parse(localStorage.getItem('loggedInUser'));
-console.log(user);
+// console.log(user);
  database.child('post').on('child_added', function(snap) {
     var obj = snap.val();
     var objK = snap.key;
+    console.log(objK)
+    database.child('post/' + uId).on('child_added', function(s) {
+        var o = s.val();
+        var oK = s.key;
+        console.log(oK);
+    })
 
     console.log(obj.bloodGrp);
 
@@ -75,6 +81,6 @@ console.log(user);
 
 
     posts.appendChild(div1);
-    // console.log(objK);
+    console.log(objK);
  });
 
